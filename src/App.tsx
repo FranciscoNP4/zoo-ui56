@@ -167,7 +167,10 @@ function App() {
 
           <div className="animal-grid">
             {HABITANTES.map((animal) => (
-              <AnimalCard animal={animal} key={animal.name} />
+                <AnimalCard
+                    animal={animal}
+                    key={animal.name}
+                />
             ))}
           </div>
         </section>
