@@ -1,0 +1,120 @@
+.animal-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
+.animal-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    transition: transform 300ms ease;
+}
+
+.animal-card:hover {
+    transform: translateY(-4px);
+}
+
+.animal-card__media {
+    position: relative;
+    height: 256px;
+    overflow: hidden;
+}
+
+.animal-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+}
+
+.animal-card:hover .animal-card__img {
+    transform: scale(1.05);
+}
+
+.animal-card__status {
+    font-family: var(--font-display);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+}
+
+.animal-card__status--tertiary {
+    background: var(--tertiary-container);
+    color: var(--on-tertiary-container);
+}
+
+.animal-card__status--error {
+    background: var(--error-container);
+    color: var(--on-error-container);
+}
+
+.animal-card__status--fixed {
+    background: var(--tertiary-fixed);
+    color: var(--on-tertiary-fixed);
+}
+
+.animal-card__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: var(--space-md);
+}
+
+.animal-card__habitat-row {
+    margin-bottom: var(--space-sm);
+}
+
+.animal-card__habitat {
+    font-family: var(--font-display);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    margin-bottom: var(--space-base);
+    border: 1px solid var(--secondary-a20);
+    border-radius: var(--radius-full);
+    background: var(--surface);
+    color: var(--secondary);
+}
+
+.animal-card__title {
+    font-family: var(--font-display);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    margin-bottom: var(--space-base);
+    color: var(--primary);
+}
+
+.animal-card__text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    flex-grow: 1;
+    margin-bottom: var(--space-md);
+    color: var(--on-surface-variant);
+}
+
+@media (min-width: 768px) {
+    .animal-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .animal-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
