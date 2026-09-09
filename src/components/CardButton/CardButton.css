@@ -1,0 +1,23 @@
+.card-button {
+    width: 100%;
+    padding: var(--space-base) 16px;
+    border: 2px solid var(--secondary);
+    border-radius: var(--radius-lg);
+    background: transparent;
+    color: var(--secondary);
+    font-family: var(--font-display);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 150ms ease, color 150ms ease;
+}
+
+.card-button:hover {
+    background: var(--secondary-a5);
+}
+
+.card-button:active {
+    transform: scale(0.98);
+}
